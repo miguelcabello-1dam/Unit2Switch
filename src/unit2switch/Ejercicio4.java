@@ -1,5 +1,5 @@
 package unit2switch;
-as
+
 import java.util.Scanner;
 
 public class Ejercicio4 {
