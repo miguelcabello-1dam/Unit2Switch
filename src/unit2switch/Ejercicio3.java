@@ -35,21 +35,11 @@ public class Ejercicio3 {
 		
 		
 		switch(eleccion) {
-			case "A", "a" -> {
-				System.out.println("Has elegido sumar, " + num1 + " + " + num2 + " es: " + (num1+num2));
-			}
-			case "B", "b" -> {
-				System.out.println("Has elegido restar, " + num1 + " - " + num2 + " es: " + (num1-num2));
-			}
-			case "C", "c" -> {
-				System.out.println("Has elegido multiplicar, " + num1 + " * " + num2 + " es: " + (num1*num2));
-			}
-			case "D", "d" -> {
-				System.out.println("Has elegido dividir, " + num1 + " / " + num2 + " es: " + (num1/num2));
-			}
-			default -> {
-				System.out.println("Opcion no valida");
-			}
+			case "A", "a" -> { System.out.println("Has elegido sumar, " + num1 + " + " + num2 + " es: " + (num1+num2)); }
+			case "B", "b" -> { System.out.println("Has elegido restar, " + num1 + " - " + num2 + " es: " + (num1-num2)); }
+			case "C", "c" -> { System.out.println("Has elegido multiplicar, " + num1 + " * " + num2 + " es: " + (num1*num2)); }
+			case "D", "d" -> { System.out.println("Has elegido dividir, " + num1 + " / " + num2 + " es: " + (num1/num2)); }
+			default -> { System.out.println("Opcion no valida"); }
 		}
 		
 		// se cierra el scanner

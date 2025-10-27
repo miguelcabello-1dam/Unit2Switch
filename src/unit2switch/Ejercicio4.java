@@ -10,46 +10,47 @@ public class Ejercicio4 {
 		// se define el scanner
 		Scanner sc = new Scanner(System.in);
 		
-		// variable donde se almacena el primer num como int
-		int num1;
-		// variable donde se almacena el segundo num como int
-		int num2;
-		// variable donde se almacena la eleccion como string
-		String eleccion;
+		// variable donde se almacena la primera tirada como int
+		String tirada1Cadena;
+		// variable donde se almacena la segunda tirada como int
+		String tirada2Cadena;
+		int tirada1Num;
+		int tirada2Num;
 		
-		// se pide que se introduzca el primer numero
-		System.out.println("Introduce primer num: ");
-		// se guarda en la variable num1
-		num1 = sc.nextInt();
+		
+		// se pide que se introduzca la primera tirada
+		System.out.println("Introduce tu primera tirada, sin numeros: ");
+		// se guarda en la variable tirada1Cadena
+		tirada1Cadena = sc.next();
 		// se pide que se introduzca el segundo numero
-		System.out.println("Introduce segundo num: ");
-		// se guarda en la variable num2
-		num2 = sc.nextInt();
+		System.out.println("Introduce tu segunda tirada, sin numeros: ");
+		// se guarda en la variable tirada2Cadena
+		tirada2Cadena = sc.next();
 		
-		System.out.println("Selecciona una opcion: ");
-		System.out.println("A: SUMAR LOS NUMEROS");
-		System.out.println("B: RESTAR LOS NUMEROS");
-		System.out.println("C: MULTIPLICAR LOS NUMEROS");
-		System.out.println("D: DIVIDIR LOS NUMEROS");
-		eleccion = sc.next();
+		switch(tirada1Cadena) {
+			case "UNO", "uno" -> { tirada1Num = 1; }
+			case "DOS", "dos" -> { tirada1Num = 2; }
+			case "TRES", "tres" -> { tirada1Num = 3; }
+			case "CUATRO", "cuatro" -> { tirada1Num = 4; }
+			case "CINCO", "cinco" -> { tirada1Num = 5; }
+			case "SEIS", "seis" -> { tirada1Num = 6; }
+			default -> { tirada1Num = 0; }
+		}
 		
+		switch(tirada2Cadena) {
+			case "UNO", "uno" -> { tirada2Num = 1; }
+			case "DOS", "dos" -> { tirada2Num = 2; }
+			case "TRES", "tres" -> { tirada2Num = 3; }
+			case "CUATRO", "cuatro" -> { tirada2Num = 4; }
+			case "CINCO", "cinco" -> { tirada2Num = 5; }
+			case "SEIS", "seis" -> { tirada2Num = 6; }
+			default -> { tirada2Num = 0; }
+		}
 		
-		switch(eleccion) {
-			case "A", "a" -> {
-				System.out.println("Has elegido sumar, " + num1 + " + " + num2 + " es: " + (num1+num2));
-			}
-			case "B", "b" -> {
-				System.out.println("Has elegido restar, " + num1 + " - " + num2 + " es: " + (num1-num2));
-			}
-			case "C", "c" -> {
-				System.out.println("Has elegido multiplicar, " + num1 + " * " + num2 + " es: " + (num1*num2));
-			}
-			case "D", "d" -> {
-				System.out.println("Has elegido dividir, " + num1 + " / " + num2 + " es: " + (num1/num2));
-			}
-			default -> {
-				System.out.println("Opcion no valida");
-			}
+		if (tirada1Num == 0 || tirada2Num == 0) {
+			System.out.println("Alguna de las tiradas o ambas no han sido validas");
+		} else {
+			System.out.println("Has sacado un " + tirada1Num + " y un " + tirada2Num + ", en total has sacado un " + (tirada1Num+tirada2Num));
 		}
 		
 		// se cierra el scanner

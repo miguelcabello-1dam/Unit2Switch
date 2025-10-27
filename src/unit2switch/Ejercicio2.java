@@ -13,7 +13,7 @@ public class Ejercicio2 {
 		// variable donde se almacena el num como int
 		int num;
 		// variable donde se almacena el dia de la semana como string
-		String diasemana;
+		String diaSemana;
 		
 		// se pide que se introduzca el numero
 		System.out.println("Introduce num del 1 al 7: ");
@@ -21,34 +21,20 @@ public class Ejercicio2 {
 		num = sc.nextInt();
 		
 		switch(num) {
-			case 1 -> {
-				diasemana = "Lunes";
-			}
-			case 2 -> {
-				diasemana = "Martes";
-			}
-			case 3 -> {
-				diasemana = "Miercoles";
-			}
-			case 4 -> {
-				diasemana = "Jueves";
-			}
-			case 5 -> {
-				diasemana = "Viernes";
-			}
-			case 6 -> {
-				diasemana = "Sabado";
-			}
-			case 7 -> {
-				diasemana = "Domingo";
-			}
+			case 1 -> { diaSemana = "Lunes"; }
+			case 2 -> { diaSemana = "Martes"; }
+			case 3 -> { diaSemana = "Miercoles"; }
+			case 4 -> { diaSemana = "Jueves"; }
+			case 5 -> { diaSemana = "Viernes"; }
+			case 6 -> { diaSemana = "Sabado"; }
+			case 7 -> { diaSemana = "Domingo"; }
 			default -> {
-				diasemana = "error";
+				diaSemana = "error";
 				System.out.println("Numero fuera de rango");
 			}
 		}
 		
-		System.out.println("Has dicho " + num + ", es " + diasemana);
+		System.out.println("Has dicho " + num + ", es " + diaSemana);
 		
 		// se cierra el scanner
 		sc.close();

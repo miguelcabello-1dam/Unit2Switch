@@ -11,38 +11,28 @@ public class Ejercicio1 {
 		Scanner sc = new Scanner(System.in);
 		
 		// variable donde se almacena la nota como int
-		int notanum;
+		int notaNum;
 		// variable donde se almacena la descripcion de la nota como string
-		String notadesc;
+		String notaDesc;
 		
 		// se pide que se introduzca la nota
 		System.out.println("Introduce la nota del 1 al 10: ");
 		// se guarda en la variable notanum
-		notanum = sc.nextInt();
+		notaNum = sc.nextInt();
 		
-		switch(notanum) {
-			case 0, 1, 2, 3, 4 -> {
-				notadesc = "insuficiente";
-			}
-			case 5 -> {
-				notadesc = "suficiente";
-			}
-			case 6 -> {
-				notadesc = "bien";
-			}
-			case 7, 8 -> {
-				notadesc = "notable";
-			}
-			case 9, 10 -> {
-				notadesc = "sobresaliente";
-			}
-			default -> {
-				notadesc = "error";
-				System.out.println("Nota fuera de rango");
+		switch(notaNum) {
+			case 0, 1, 2, 3, 4 -> { notaDesc = "insuficiente"; }
+			case 5 -> { notaDesc = "suficiente"; }
+			case 6 -> { notaDesc = "bien"; }
+			case 7, 8 -> { notaDesc = "notable"; }
+			case 9, 10 -> { notaDesc = "sobresaliente"; }
+			default -> { 
+				notaDesc = "error"; 
+				System.out.println("Nota fuera de rango"); 
 			}			
 		}
 		
-		System.out.println("Has sacado un " + notanum + ": " + notadesc);
+		System.out.println("Has sacado un " + notaNum + ": " + notaDesc);
 		
 		// se cierra el scanner
 		sc.close();
